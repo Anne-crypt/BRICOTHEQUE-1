@@ -1,0 +1,11 @@
+<div class="index-banner" >
+
+</div>
+<div class="container">
+<% @tools.each do |tool|%>
+  <div class ="tool-card">
+      <%= tool.name%>
+      <%= tool.description%>
+  </div>
+<% end %>
+</div>
