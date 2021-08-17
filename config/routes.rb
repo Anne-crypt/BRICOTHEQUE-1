@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   # added by Raph
   get '/tools/:id/edit', to: 'tools#edit'
-  post 'tools/:id', to: 'tools#update'
+  post 'tools/:id', to: 'tools#update', as: :tool
 end

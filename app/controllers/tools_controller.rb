@@ -9,6 +9,7 @@ class ToolsController < ApplicationController
 
   def edit
     @tool = Tool.find(params[:id])
+    raise
   end
 
   def update
