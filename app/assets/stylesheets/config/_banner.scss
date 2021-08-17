@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(238, 209, 45);
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -6,16 +10,18 @@
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  padding-bottom: 50px;
+  color: rgb(238, 209, 45);
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  font-size: 120px;
   font-weight: bold;
+  text-align: center;
 }
 
 .banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
+  font-size: 50px;
+  color: rgb(238, 209, 45);
+  text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
