@@ -1,5 +1,5 @@
 class ToolsController < ApplicationController
-  before_action :authorizetool, only: %i[edit]
+  before_action :set_tool, only: %i[edit update destroy]
 
   def index
     if params[:query].present?
@@ -41,7 +41,8 @@ class ToolsController < ApplicationController
 
   private
 
-  def authorizetool
+  def set_tool
+    @tool = Tool.find(params[:id])
     authorize @tool
   end
 

@@ -25,12 +25,9 @@
 
     </a>
   </li>
-<% end %>
-</ul>
+ <% end %>
+ </ul>
 
-<% @tools.each do |tool| %>
-<li><%= link_to tool.name, tool_path(tool) %>: <%= tool.price_day %>$ per day with a deposit of <%= tool.price_deposit %></li>
-<% end %>
 
 
 <%= link_to "create a new tool", new_tool_path %>
