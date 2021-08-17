@@ -6,13 +6,13 @@
   <li>
     <a href="tool/<%=tool.id%>" class="toolcard">
       <div class="toolcard__image" alt="">
-           <%= cl_image_tag("ikiqbip4sz6st05f8enj", crop: :fill) %>
+           <%#= cl_image_tag("ikiqbip4sz6st05f8enj", crop: :fill) %>
       </div>
       <div class="toolcard__overlay">
         <div class="toolcard__header">
           <svg class="toolcard__arc"><path class d = "M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
           <div class="avatar toolcard__thumb">
-            <%= cl_image_tag("vux0ned3dr0a3gb4lf3h",borderradius: 50, width: 50, crop: :fill, gravity: :face)%>
+            <%#= cl_image_tag("vux0ned3dr0a3gb4lf3h",borderradius: 50, width: 50, crop: :fill, gravity: :face)%>
           </div>
           <div class="toolcard__header-text">
             <h3 class="toolcard__title"><%=tool.name%></h3>
@@ -25,3 +25,10 @@
   </li>
 <% end %>
 </ul>
+
+<% @tools.each do |tool| %>
+<li><%= tool.name %></li>
+<% end %>
+
+
+<%= link_to "New Tool", new_tool_path %>
