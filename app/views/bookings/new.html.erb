@@ -1,7 +1,7 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-4 mx-auto">
-      <%= simple_form_for [@booking,@tool] do |f| %>
+      <%= simple_form_for [@tool, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
       <%= f.submit %>
