@@ -1,7 +1,12 @@
 class ToolsController < ApplicationController
-  authorize @tool
 
+  authorize @tool
   def index
-    @tools = policy_scope(Tool).order(created_at: :desc)
+    if params[:query].present?
+      @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
+    else
+      @tools = policy_scope(Tool).order(created_at: :desc)
+    end
+
   end
 end
