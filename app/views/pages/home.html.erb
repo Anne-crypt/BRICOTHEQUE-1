@@ -33,7 +33,7 @@
   <div class="container">
     <div>
       <h1>BRICOTHEQUE</h1>
-      <p>Find your perfect tool !</p>
+      <p>Find the perfect tool, right next to you !</p>
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
         <div class="search-form-control form-group">
           <input class="form-control string required" type="text" name="search[query]" id="search_query" />
@@ -76,4 +76,23 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
+<br>
+<div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  GARDEN
+  </div>
+  <br>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  MACHINERY
+  </div>
+  <br>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  HOME
+  </div>
+  <br>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/my-mechanic')">
+  MECANIC
+  </div>
+
 </div>
