@@ -26,4 +26,10 @@ tools.each_with_index do |tool, index|
 end
 
 puts "You have created #{tools.length} tools"
+
+puts "Creating Amdin user..."
+raph = {email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino", admin: true, password: "test-test"}
+User.create(raph)
+puts "Amdin user created"
+
 puts "You are good to go!"
