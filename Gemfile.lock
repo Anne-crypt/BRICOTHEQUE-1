@@ -252,16 +252,10 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-<<<<<<< HEAD
-  x86_64-darwin-19
-=======
-  x86_64-darwin-20
->>>>>>> master
-  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
-  bootsnap (>= 1.4.2)
+  bootsnap (>= 1.4.2
   byebug
   capybara (>= 2.15)
   cloudinary (~> 1.16.0)
