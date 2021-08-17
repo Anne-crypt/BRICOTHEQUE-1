@@ -10,6 +10,7 @@ class ToolsController < ApplicationController
   end
 
 
+
   private
 
   def authorizetool
