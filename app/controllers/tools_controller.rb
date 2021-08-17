@@ -9,6 +9,21 @@ class ToolsController < ApplicationController
     end
   end
 
+  def def new
+    @tool = Tool.new
+  end
+
+  def create
+    @tool = Tool.new(tool_params)
+    @tool.user_id = current_user
+    raise
+    if @tool.save
+      redirect tools_path
+    else
+      render :new
+    end
+  end
+
   def edit
     @tool = Tool.find(params[:id])
   end
@@ -25,5 +40,8 @@ class ToolsController < ApplicationController
     authorize @tool
   end
 
+  def tool_params
+    params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
+  end
 
 end
