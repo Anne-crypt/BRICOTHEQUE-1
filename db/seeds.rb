@@ -14,7 +14,7 @@ raph = {email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino"
 User.create(raph)
 puts "Amdin user created"
 
-TOOL::CATEGORIES = ["garden", "machinery", "home", "mechanic"]
+CATEGORIES = ["garden", "machinery", "home", "mechanic"]
 puts "Creating Tools..."
 hammer = {name: "Beautiful hammer", category: CATEGORIES[0], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id}
 screwer = {name: "Clean screwer", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id}
