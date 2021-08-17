@@ -11,12 +11,12 @@ class ToolsController < ApplicationController
 
   def new
     @tool = Tool.new
-    authorizetool
+    authorize @tool
   end
 
   def show
     @tool = Tool.find(params[:id])
-    authorizetool
+    authorize @tool
   end
 
   def create
@@ -49,5 +49,4 @@ class ToolsController < ApplicationController
   def tool_params
     params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
   end
-
 end
