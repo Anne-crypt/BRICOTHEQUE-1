@@ -13,13 +13,15 @@ class BookingsController < ApplicationController
 
   def new
     @tool = Tool.find(params[:tool_id])
-    @booking = booking.new
+    @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @tool = Tool.find(params[:tool_id])
     @booking = Booking.new(params_booking)
     @booking.tool = @tool
+    authorize @booking
     if @booking.save
       redirect_to root
     else
