@@ -38,6 +38,7 @@ class ToolsController < ApplicationController
     redirect_to tools_path
   end
 
+
   private
 
   def authorizetool
