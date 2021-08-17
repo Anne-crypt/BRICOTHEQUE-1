@@ -14,12 +14,12 @@ raph = {email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino"
 User.create(raph)
 puts "Amdin user created"
 
-TOOL::CATEGORIES = ["garden", "machinery", "home", "mechanic"]
+CATEGORIES = ["garden", "machinery", "home", "mechanic"]
 puts "Creating Tools..."
-hammer = {name: "Beautiful hammer", category: CATEGORIES[0], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id}
-screwer = {name: "Clean screwer", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id}
-screwdriver = {name: "Smooth screwdriver", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: raph.id}
-broom = {name: "Efficient broom", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id}
+hammer = {name: "Beautiful hammer", category: CATEGORIES[0], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: 3}
+screwer = {name: "Clean screwer", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: 3}
+screwdriver = {name: "Smooth screwdriver", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: 3}
+broom = {name: "Efficient broom", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: 3}
 tools = [hammer, screwer, screwdriver, broom]
 tools.each_with_index do |tool, index|
   Tool.create(tool)
