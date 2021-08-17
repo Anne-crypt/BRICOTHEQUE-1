@@ -9,7 +9,7 @@ class ToolsController < ApplicationController
     end
   end
 
-  def def new
+  def new
     @tool = Tool.new
   end
 
