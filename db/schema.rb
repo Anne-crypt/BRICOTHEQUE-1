@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_102712) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name", null: false
+    t.string "name"
     t.string "category"
     t.text "description"
     t.index ["user_id"], name: "index_tools_on_user_id"
@@ -77,9 +77,9 @@ ActiveRecord::Schema.define(version: 2021_08_17_102712) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "admin"
     t.string "first_name", null: false
     t.string "last_name", null: false
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
