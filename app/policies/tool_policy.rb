@@ -16,5 +16,4 @@ class ToolPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
-
 end
