@@ -9,6 +9,15 @@ class ToolsController < ApplicationController
     end
   end
 
+  def edit
+    @tool = Tool.find(params[:id])
+  end
+
+  def update
+    @tool = Tool.find(params[:id])
+    @tool = Tool.update(params[:tool])
+    redirect_to tools_path
+  end
 
   private
 
@@ -16,22 +25,5 @@ class ToolsController < ApplicationController
     authorize @tool
   end
 
-  def edit
-    @tool = Tool.find(params[:id])
-    raise
-  end
-
-  def update
-    @tool = Tool.find(params[:id])
-    @tool = Tool.update(params[:tool])
-    # redirect_to tool_path(@tool)
-    redirect_to root
-  end
-
-  private
-
-  def tool_params
-    params.require(:tool).permit(:name, :price_day, :price_deposit, :name, :category, :description, :photo)
-  end
 
 end
