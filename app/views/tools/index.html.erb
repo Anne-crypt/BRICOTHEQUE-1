@@ -1,6 +1,7 @@
 <div class="index-banner" >
-
+<h1>Tools index</h1>
 </div>
+
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
@@ -21,14 +22,16 @@
         </div>
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
+
     </a>
-  </li>
-<% end %>
-</ul>
+  </li> %>
+<%# end %>
+<%# </ul> %>
 
 <% @tools.each do |tool| %>
-<li><%= tool.name %></li>
+<li><%= link_to tool.name, tool_path(tool) %>: <%= tool.price_day %>$ per day with a deposit of <%= tool.price_deposit %></li>
 <% end %>
 
 
-<%= link_to "New Tool", new_tool_path %>
+<%= link_to "create a new tool", new_tool_path %>
+
