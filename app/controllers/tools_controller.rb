@@ -11,12 +11,12 @@ class ToolsController < ApplicationController
 
   def new
     @tool = Tool.new
+    authorize @tool
   end
 
   def create
     @tool = Tool.new(tool_params)
     @tool.user_id = current_user
-    raise
     if @tool.save
       redirect tools_path
     else
