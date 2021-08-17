@@ -14,6 +14,11 @@ class ToolsController < ApplicationController
     authorize @tool
   end
 
+  def show
+    @tool = Tool.find(params[:id])
+    authorize @tool
+  end
+
   def create
     @tool = Tool.new(tool_params)
     @tool.user_id = current_user
