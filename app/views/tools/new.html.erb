@@ -1,0 +1,23 @@
+<h1>New Tool</h1>
+
+<%# formulaire pour créer %>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <%= simple_form_for [@tool] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :price_day %>
+      <%= f.input :price_deposit %>
+      <%= f.input :category %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+
+    <% if policy(Tool).create? %>
+      <%= link_to "New Tool", new_tool_path %>
+    <% end %>
+
+  </div>
+</div>
