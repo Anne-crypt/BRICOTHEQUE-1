@@ -13,11 +13,11 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def create?
-    @user = user
+    true
   end
 
   def new?
