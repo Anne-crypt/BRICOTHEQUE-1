@@ -8,15 +8,15 @@ class ToolsController < ApplicationController
       @tools = policy_scope(Tool).order(created_at: :desc)
     end
   end
-  
+
   def new
     @tool = Tool.new
-    authorize @tool
+    authorizetool
   end
 
   def show
     @tool = Tool.find(params[:id])
-    authorize @tool
+    authorizetool
   end
 
   def create
@@ -42,7 +42,7 @@ class ToolsController < ApplicationController
     @tool = Tool.update(params[:tool])
     redirect_to tools_path
   end
-  
+
   private
 
   def authorizetool
