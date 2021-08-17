@@ -1,6 +1,8 @@
 <div class="index-banner" >
 <h1>Tools index</h1>
 
+<p><%= link_to 'Edit a tool', tool_path(@tool) %></p>
+
 </div>
 <ul class="toolcards">
  <% @tools.each do |tool|%>
