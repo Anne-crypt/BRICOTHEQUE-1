@@ -11,6 +11,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+  }
 }
 
 .card-category-machinery {
@@ -26,6 +29,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+  }
 }
 
 .card-category-home {
@@ -41,6 +47,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+  }
 }
 
 .card-category-mechanic {
@@ -56,4 +65,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+  }
 }
