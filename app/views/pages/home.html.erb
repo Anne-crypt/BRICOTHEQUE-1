@@ -1,3 +1,4 @@
+<div class="container">
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
     <i class="fas fa-tools"></i>
@@ -13,6 +14,7 @@
       <li class="nav-item active">
         <% if user_signed_in? %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%= current_user.email %>
         <% else %>
         <li><%= link_to 'Sign in', new_user_session_path, class: "nav-link" %></li>
         <li><%= link_to 'Register', new_user_registration_path, class: "nav-link" %></li>
@@ -28,8 +30,9 @@
     </ul>
   </div>
 </div>
+</div>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner.jpeg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/background outils.jpeg');">
   <div class="container">
     <div>
       <h1>BRICOTHEQUE</h1>
@@ -49,23 +52,22 @@
 <%= link_to "log out", destroy_user_session_path, method: :delete %>
 
 <br>
-<div class="container">
+<div class="container" id="carousel" >
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="max-height:250px;">
       <div class="carousel-item active">
-
-        <img class="d-block w-100" src='assets/images.jpeg' alt="First slide">
+        <img class="d-block w-100" src='assets/home_tool.png' alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src='assets/images.jpeg' alt="Second slide">
+        <img class="d-block w-100" src='assets/machinery' alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 center" src='assets/images.jpeg' alt="Third slide">
+        <img class="d-block w-100 center" src='assets/my-mechanic' alt="Third slide">
 
       </div>
     </div>
@@ -81,20 +83,21 @@
 </div>
 <br>
 <div class="container">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category-garden" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/gardening')">
   GARDEN
   </div>
   <br>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category-machinery" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/machinery')">
   MACHINERY
   </div>
   <br>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/home_tool')">
   HOME
   </div>
   <br>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/my-mechanic')">
-  MECANIC
+  <div class="card-category-mechanic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/my-mechanic')">
+  MECHANIC
   </div>
-
+<br>
+<br>
 </div>

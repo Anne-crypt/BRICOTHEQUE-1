@@ -1,0 +1,29 @@
+<h1>card partial</h1>
+
+<div class="card-tool">
+
+  <div class="card-tool-infos">
+
+  </div>
+</div>
+
+
+<div clas="container" id="tool-details">
+  <div>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  </div>
+  <div>
+    <h2><%= @tool.name %></h2>
+    <p><%= @tool.description %></p>
+  </div>
+  <div>
+    <p><%= @tool.availability %></p>
+    <p><%= @tool.price_day %></p>
+    <p><%= @tool.price_deposit %></p>
+  </div>
+<p><%= link_to "Back to list", tools_path %></p>
+
+</div>
+
+<p><%= link_to "Edit a tool", edit_user_tool_path(@tool) %></p>
+
