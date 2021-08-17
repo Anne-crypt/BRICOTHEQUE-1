@@ -26,6 +26,7 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    authorize @tool
   end
 
   def edit
@@ -38,7 +39,6 @@ class ToolsController < ApplicationController
     redirect_to tools_path
   end
 
-
   private
 
   def authorizetool
@@ -48,5 +48,4 @@ class ToolsController < ApplicationController
   def tool_params
     params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
   end
-
 end

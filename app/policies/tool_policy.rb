@@ -9,6 +9,10 @@ class ToolPolicy < ApplicationPolicy
     return true
   end
 
+  def show?
+    return true
+  end
+
   def update?
     record.user == user
   end
