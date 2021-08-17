@@ -1,3 +1,4 @@
+<div class="container">
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
     <i class="fas fa-tools"></i>
@@ -13,6 +14,7 @@
       <li class="nav-item active">
         <% if user_signed_in? %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%= current_user.email %>
         <% else %>
         <li><%= link_to 'Sign in', new_user_session_path, class: "nav-link" %></li>
         <li><%= link_to 'Register', new_user_registration_path, class: "nav-link" %></li>
@@ -27,6 +29,7 @@
       </li>
     </ul>
   </div>
+</div>
 </div>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/background outils.jpeg');">
