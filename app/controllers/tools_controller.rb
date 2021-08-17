@@ -8,9 +8,10 @@ class ToolsController < ApplicationController
       @tools = policy_scope(Tool).order(created_at: :desc)
     end
   end
-
+  
   def new
     @tool = Tool.new
+    authorize @tool
   end
 
   def show
@@ -22,20 +23,34 @@ class ToolsController < ApplicationController
     @tool = Tool.new(tool_params)
     @tool.user_id = current_user
     if @tool.save
-      redirect_to tools_path
+      redirect tools_path
     else
       render :new
     end
   end
 
+  def show
+    @tool = Tool.find(params[:id])
+  end
 
+  def edit
+    @tool = Tool.find(params[:id])
+  end
+
+  def update
+    @tool = Tool.find(params[:id])
+    @tool = Tool.update(params[:tool])
+    redirect_to tools_path
+  end
+  
   private
+
+  def authorizetool
+    authorize @tool
+  end
 
   def tool_params
     params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
   end
 
-  def authorizetool
-    authorize @tool
-  end
 end

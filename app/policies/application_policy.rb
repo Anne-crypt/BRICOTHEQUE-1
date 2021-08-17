@@ -17,7 +17,7 @@ class ApplicationPolicy
   end
 
   def create?
-    @user = user
+    @user = user || admin
   end
 
   def new?
