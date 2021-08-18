@@ -13,7 +13,7 @@
         <div class="toolcard__header">
           <svg class="toolcard__arc"><path class d = "M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
           <div class="avatar toolcard__thumb">
-            <%= cl_image_tag("vux0ned3dr0a3gb4lf3h",borderradius: 50, width: 50, crop: :fill, gravity: :face)%>
+            <%= cl_image_tag tool.photos.first.key,borderradius: 50, width: 50, crop: :fill, gravity: :face)%>
           </div>
           <div class="toolcard__header-text">
             <h3 class="toolcard__title"><%=tool.name%></h3>

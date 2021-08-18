@@ -22,12 +22,7 @@ class BookingsController < ApplicationController
     @booking.tool = @tool
     @booking.user = current_user
     authorize @booking
-    if @booking.save
-      flash[:notice] = "Successfully booked the #{@tool.name}, wait for #{@tool.user.first_name} #{@tool.user.last_name} to confirm your booking"
-      redirect_to '/'
-    else
-      render :new
-    end
+    save_the_booking(@booking)
   end
 
   private
@@ -38,5 +33,17 @@ class BookingsController < ApplicationController
 
   def set_tool
     @tool = Tool.find(params[:tool_id])
+  end
+
+  def save_the_booking(booking)
+    if booking.save && booking.end_date >= booking.start_date
+      flash[:notice] = "Successfully booked the #{booking.tool.name}, wait for #{booking.tool.user.first_name} #{booking.tool.user.last_name} to confirm your booking"
+      redirect_to '/'
+    elsif booking.end_date < booking.start_date
+      flash[:alert] = "make sure your end-date is later or equal to your start-date"
+      redirect_to new_tool_booking_path
+    else
+      render :new
+    end
   end
 end
