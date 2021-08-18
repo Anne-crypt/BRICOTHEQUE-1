@@ -7,7 +7,7 @@
   <li>
     <%= link_to tool_path(tool), class:"toolcard" do %>
       <div class="toolcard__image" alt="">
-           <%= cl_image_tag(tool.photos.first.key, crop: :fill) %>
+           <%= cl_image_tag(tool.photos.first.key, class: "toolcard_image", crop: :scale) %>
       </div>
       <div class="toolcard__overlay">
         <div class="toolcard__header">
