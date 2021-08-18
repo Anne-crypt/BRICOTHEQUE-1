@@ -29,6 +29,13 @@ class ToolsController < ApplicationController
     end
   end
 
+
+  def show
+    @tool = Tool.find(params[:id])
+    authorize @tool
+  end
+
+
   def edit
     @tool = Tool.find(params[:id])
   end

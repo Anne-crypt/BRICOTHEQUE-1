@@ -10,4 +10,28 @@ class BookingsController < ApplicationController
     @booking.status = params[:status]
     @booking.save
   end
+
+  def new
+    @tool = Tool.find(params[:tool_id])
+    @booking = Booking.new
+    authorize @booking
+  end
+
+  def create
+    @tool = Tool.find(params[:tool_id])
+    @booking = Booking.new(params_booking)
+    @booking.tool = @tool
+    authorize @booking
+    if @booking.save
+      redirect_to root
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def params_booking
+    params.require(:booking).permits(:start_date, :end_date, )
+  end
 end
