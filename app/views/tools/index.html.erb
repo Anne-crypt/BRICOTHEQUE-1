@@ -1,11 +1,16 @@
 <div class="index-banner" >
-<h1>Tools index</h1>
+  <h1>Tools index</h1>
 </div>
 
+
+<div class="index-banner" >
+
+</div>
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
-    <a href="tools/<%=tool.id%>" class="toolcard">
+    <%= link_to tool_path(tool), class:"toolcard" do %>
+    <%# <a href="/tools/<%#=tool.id%>" class="toolcard"> %>
       <div class="toolcard__image" alt="">
            <%= cl_image_tag(tool.photos.first.key, width: 100, crop: :fill) %>
       </div>
@@ -28,12 +33,17 @@
         </div>
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
-
-    </a>
+    <% end %>
+    <%# </a> %>
   </li>
+
  <% end %>
  </ul>
 
-
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
 <%= link_to "create a new tool", new_tool_path %>
