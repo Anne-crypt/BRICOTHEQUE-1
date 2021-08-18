@@ -20,7 +20,7 @@
   <br>
   <div class="link">
     <br>
-    <%= link_to "Back to list", tools_path, class: "back-list" %>
+    <%= link_to "Back to list", "/tools?category=#{@tool.category}", class: "back-list" %>
     <%= link_to "Edit a tool", edit_tool_path(@tool), class: "tool-edit" %>
     <%= link_to "Back to home", root_path, class: "back-home" %>
   </div>
