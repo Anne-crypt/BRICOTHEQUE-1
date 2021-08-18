@@ -31,19 +31,15 @@ class ToolsController < ApplicationController
     end
   end
 
-
-  def show
-    @tool = Tool.find(params[:id])
-    authorize @tool
-  end
-
-
   def edit
     @tool = Tool.find(params[:id])
+    authorize @tool
+
   end
 
   def update
     @tool = Tool.find(params[:id])
+    authorize @tool
     @tool = Tool.update(params[:tool])
     redirect_to tools_path
   end
