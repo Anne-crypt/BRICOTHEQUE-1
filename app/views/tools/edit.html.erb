@@ -1,1 +1,10 @@
 <h1>Edit tool page</h1>
+
+<%= simple_form_for(@tool) do |f| %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price_day %>
+  <%= f.input :price_deposit %>
+  <%= f.submit %>
+<% end %>
