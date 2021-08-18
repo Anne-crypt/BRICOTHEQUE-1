@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :set_tool, only: %i[new create]
   def index
     @user = User.find(params[:user_id])
     @bookings = policy_scope(Booking).where(status: 'pending')
@@ -12,18 +13,18 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @tool = Tool.find(params[:tool_id])
     @booking = Booking.new
     authorize @booking
   end
 
   def create
-    @tool = Tool.find(params[:tool_id])
     @booking = Booking.new(params_booking)
     @booking.tool = @tool
+    @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to root
+      flash[:notice] = "Successfully booked the #{@tool.name}, wait for #{@tool.user.first_name} #{@tool.user.last_name} user to confirm your booking"
+      redirect_to '/'
     else
       render :new
     end
@@ -32,6 +33,10 @@ class BookingsController < ApplicationController
   private
 
   def params_booking
-    params.require(:booking).permits(:start_date, :end_date, )
+    params.require(:booking).permit(:start_date, :end_date)
+  end
+
+  def set_tool
+    @tool = Tool.find(params[:tool_id])
   end
 end
