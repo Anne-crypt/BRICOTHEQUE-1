@@ -1,26 +1,26 @@
-<h1>card partial</h1>
+<br>
+<div class="container" id="tool-detail">
+  <h1><%= @tool.name %></h1>
+  <br>
+  <div>
+    <img class="tool-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  </div>
+  <div>
+    <div class="info">
+      <p><%= @tool.description %></p>
+    </div>
+    <div class="prices">
+      <p><%= @tool.price_day %> $</p>
+      <p><%= @tool.price_deposit %> $</p>
+    </div>
+  </div>
+  <a href=""><%= link_to "BOOK NOW", "#", class: "btn btn-gradient" %></a>
+  <br>
+  <div>
 
-<div class="card-tool">
-
-  <div class="card-tool-infos">
-
+  <br class="link">
+  <%= link_to "Back to list", tools_path, class: "back-list" %>
+  <%= link_to "Edit a tool", edit_user_tool_path(@tool), class: "tool-edit" %>
   </div>
 </div>
 
-
-<div clas="container" id="tool-details">
-  <div>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  </div>
-  <div>
-    <h2><%= @tool.name %></h2>
-    <p><%= @tool.description %></p>
-  </div>
-  <div>
-    <p><%#= @tool.availability %></p>
-    <p><%= @tool.price_day %></p>
-    <p><%= @tool.price_deposit %></p>
-  </div>
-<p><%= link_to "Back to list", tools_path %></p>
-
-<p><%= link_to "Edit", edit_tool_path(@tool) %></p>
