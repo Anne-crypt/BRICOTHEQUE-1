@@ -2,22 +2,24 @@ class ToolsController < ApplicationController
   before_action :authorizetool, only: %i[edit]
 
   def index
-    if params[:query].present?
-      @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
-    else
-      @tools = policy_scope(Tool).order(created_at: :desc)
+    @tools = Tool.all
+    @markers = @tools.geocoded.map do |tool|
+      {
+        lat: tool.latitude,
+        lng: tool.longitude
+      }
     end
   end
-  
+
   def new
     @tool = Tool.new
     authorize @tool
   end
 
-  def show
-    @tool = Tool.find(params[:id])
-    authorize @tool
-  end
+  # def show
+  #   @tool = Tool.find(params[:id])
+  #   authorize @tool
+  # end
 
   def create
     @tool = Tool.new(tool_params)
@@ -29,10 +31,6 @@ class ToolsController < ApplicationController
     end
   end
 
-  def show
-    @tool = Tool.find(params[:id])
-  end
-
   def edit
     @tool = Tool.find(params[:id])
   end
@@ -42,7 +40,7 @@ class ToolsController < ApplicationController
     @tool = Tool.update(params[:tool])
     redirect_to tools_path
   end
-  
+
   private
 
   def authorizetool
@@ -52,5 +50,4 @@ class ToolsController < ApplicationController
   def tool_params
     params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
   end
-
 end
