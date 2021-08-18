@@ -1,17 +1,13 @@
-<div class="index-banner" >
-  <h1>Tools index</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path("home_tool_rizjqh", crop: :fill )%>');" >
+  <h1>A tool for every job</h1>
 </div>
 
-
-<div class="index-banner" >
-
-</div>
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
     <%= link_to tool_path(tool), class:"toolcard" do %>
       <div class="toolcard__image" alt="">
-           <%= cl_image_tag(tool.photos.first.key, width: 100, crop: :fill) %>
+           <%= cl_image_tag(tool.photos.first.key, crop: :fill) %>
       </div>
       <div class="toolcard__overlay">
         <div class="toolcard__header">
