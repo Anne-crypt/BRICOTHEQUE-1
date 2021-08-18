@@ -8,10 +8,13 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<div class="index-banner" >
+
+</div>
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
-    <a href="tools/<%=tool.id%>" class="toolcard">
+    <a href="/tools/<%=tool.id%>" class="toolcard">
       <div class="toolcard__image" alt="">
            <%= cl_image_tag("ikiqbip4sz6st05f8enj", crop: :fill) %>
       </div>
@@ -28,14 +31,10 @@
         </div>
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
-
     </a>
   </li>
-  <% end %>
-</ul>
 
-<% @tools.each do |tool| %>
-<li><%= link_to tool.name, tool_path(tool) %>: <%= tool.price_day %>$ per day with a deposit of <%= tool.price_deposit %></li>
-<% end %>
+ <% end %>
+ </ul>
 
 <%= link_to "create a new tool", new_tool_path %>
