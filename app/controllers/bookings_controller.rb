@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      flash[:notice] = "Successfully booked the #{@tool.name}, wait for #{@tool.user.first_name} #{@tool.user.last_name} user to confirm your booking"
+      flash[:notice] = "Successfully booked the #{@tool.name}, wait for #{@tool.user.first_name} #{@tool.user.last_name} to confirm your booking"
       redirect_to '/'
     else
       render :new
