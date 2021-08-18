@@ -8,6 +8,13 @@ class ToolsController < ApplicationController
     else
       # @tools = policy_scope(Tool).order(created_at: :desc)
       @tools = policy_scope(Tool).all
+      @tools = Tool.all
+      @markers = @tools.geocoded.map do |tool|
+        {
+          lat: tool.latitude,
+          lng: tool.longitude
+        }
+      end
     end
   end
 
