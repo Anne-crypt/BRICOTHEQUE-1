@@ -9,7 +9,8 @@
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
-    <a href="/tools/<%=tool.id%>" class="toolcard">
+    <%= link_to tool_path(tool), class:"toolcard" do %>
+    <%# <a href="/tools/<%#=tool.id%>" class="toolcard"> %>
       <div class="toolcard__image" alt="">
            <%= cl_image_tag("ikiqbip4sz6st05f8enj", crop: :fill) %>
       </div>
@@ -26,7 +27,8 @@
         </div>
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
-    </a>
+    <% end %>
+    <%# </a> %>
   </li>
 
  <% end %>
