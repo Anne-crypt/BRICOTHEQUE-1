@@ -10,7 +10,6 @@
  <% @tools.each do |tool|%>
   <li>
     <%= link_to tool_path(tool), class:"toolcard" do %>
-    <%# <a href="/tools/<%#=tool.id%>" class="toolcard"> %>
       <div class="toolcard__image" alt="">
            <%= cl_image_tag(tool.photos.first.key, width: 100, crop: :fill) %>
       </div>
@@ -34,7 +33,6 @@
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
     <% end %>
-    <%# </a> %>
   </li>
 
  <% end %>
