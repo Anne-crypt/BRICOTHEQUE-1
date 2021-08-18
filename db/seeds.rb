@@ -13,7 +13,7 @@ Review.destroy_all
 puts "Database cleaned"
 
 puts "Creating Amdin user..."
-raph  = User.create({email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino", admin: true, password: "test-test"})
+raph = User.create({email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino", admin: true, password: "test-test"})
 puts "Amdin user created"
 
 CATEGORIES = ["garden", "machinery", "home", "mechanic"]
@@ -25,6 +25,7 @@ broom = Tool.create({name: "Efficient broom", category: CATEGORIES[3], price_day
 puts "You are good to go!"
 
 dorien = User.create({email: "test@lewagon.org", first_name: "Dorien", last_name: "RE", admin: false, password: "test-test"})
+rahim = User.create({email: "pauillacrahimdev@gmail.com", first_name: "rahim", last_name: "pauillac", admin: false, password: "password973"})
 
 puts "create second user Dorien"
 puts 'Dorien books the hammer (and is confirmed by Raph)'

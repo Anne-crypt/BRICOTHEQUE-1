@@ -33,10 +33,12 @@ class BookingsController < ApplicationController
   private
 
   def params_booking
+
     params.require(:booking).permit(:start_date, :end_date)
   end
 
   def set_tool
     @tool = Tool.find(params[:tool_id])
+
   end
 end
