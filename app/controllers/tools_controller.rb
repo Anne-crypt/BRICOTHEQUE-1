@@ -1,14 +1,16 @@
 class ToolsController < ApplicationController
-  before_action :authorizetool, only: %i[edit]
+  before_action :set_tool, only: %i[edit update destroy]
 
   def index
-    if params[:query].present?
-      @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
+    if params[:category].present?
+      # @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
+      @tools = policy_scope(Tool).where(category: params[:category])
     else
-      @tools = policy_scope(Tool).order(created_at: :desc)
+      # @tools = policy_scope(Tool).order(created_at: :desc)
+      @tools = policy_scope(Tool).all
     end
   end
-  
+
   def new
     @tool = Tool.new
     authorize @tool
@@ -29,28 +31,27 @@ class ToolsController < ApplicationController
     end
   end
 
-  def show
-    @tool = Tool.find(params[:id])
-  end
-
   def edit
     @tool = Tool.find(params[:id])
+    authorize @tool
+
   end
 
   def update
     @tool = Tool.find(params[:id])
+    authorize @tool
     @tool = Tool.update(params[:tool])
     redirect_to tools_path
   end
-  
+
   private
 
-  def authorizetool
+  def set_tool
+    @tool = Tool.find(params[:id])
     authorize @tool
   end
 
   def tool_params
     params.require(:tool).permit(:name, :price_day, :price_deposit, :category, :description, :photos)
   end
-
 end
