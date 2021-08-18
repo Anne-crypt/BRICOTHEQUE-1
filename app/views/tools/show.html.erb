@@ -1,0 +1,26 @@
+<br>
+<div class="container" id="tool-detail">
+  <h1><%= @tool.name %></h1>
+  <br>
+  <div>
+    <img class="tool-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  </div>
+  <div>
+    <div class="info">
+      <p><%= @tool.description %></p>
+    </div>
+    <div class="prices">
+      <p><%= @tool.price_day %> $</p>
+      <p><%= @tool.price_deposit %> $</p>
+    </div>
+  </div>
+  <a href=""><%= link_to "BOOK NOW", "#", class: "btn btn-gradient" %></a>
+  <br>
+  <div>
+
+  <br class="link">
+  <%= link_to "Back to list", tools_path, class: "back-list" %>
+  <%= link_to "Edit a tool", edit_user_tool_path(@tool), class: "tool-edit" %>
+  </div>
+</div>
+

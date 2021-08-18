@@ -1,10 +1,11 @@
 <div class="index-banner" >
-
+<h1>Tools index</h1>
 </div>
+
 <ul class="toolcards">
  <% @tools.each do |tool|%>
   <li>
-    <a href="tool/<%=tool.id%>" class="toolcard">
+    <a href="tools/<%=tool.id%>" class="toolcard">
       <div class="toolcard__image" alt="">
            <%= cl_image_tag("ikiqbip4sz6st05f8enj", crop: :fill) %>
       </div>
@@ -21,7 +22,12 @@
         </div>
         <p class="toolcard__description"><%=tool.description %></p>
       </div>
+
     </a>
   </li>
-<% end %>
-</ul>
+ <% end %>
+ </ul>
+
+
+
+<%= link_to "create a new tool", new_tool_path %>

@@ -6,6 +6,10 @@ class ToolPolicy < ApplicationPolicy
   end
 
   def create?
+    true
+  end
+
+  def show?
     return true
   end
 
