@@ -15,32 +15,37 @@
 
   <br>
   <div class="container">
+      <div class="cards">
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "garden") do%>
-        <%= image_tag('gardening.webp', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Garden", tools_path(category: "garden") %></p>
-      </div>
+        <div class="card-category-home image-home">
+          <%= link_to tools_path(category: "garden") do %>
+            <div class="position-text" style="background: linear-gradient(307deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 0%), url('<%= image_path('gardening.webp') %>'); background-size: cover; height: 100%;">
+              <p id="category-name">Garden</p>
+            </div>
+          <% end %>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "machinery") do%>
-        <%= image_tag('machinery.jpeg', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Machinery", tools_path(category: "machinery") %></p>
-      </div>
+        <div class="card-category-home image-home">
+          <%= link_to tools_path(category: "machinery") do %>
+            <div class="position-text" style="background: linear-gradient(307deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 0%), url('<%= image_path('machinery.jpeg') %>'); background-size: cover; height: 100%;">
+              <p id="category-name">Machinery</p>
+            </div>
+          <% end %>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "home") do%>
-        <%= image_tag('home_tool.png', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Home", tools_path(category: "home") %></p>
-      </div>
+        <div class="card-category-home image-home">
+          <%= link_to tools_path(category: "home") do %>
+            <div class="position-text" style="background: linear-gradient(307deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 0%), url('<%= image_path('home_tool.png') %>'); background-size: cover; height: 100%;">
+              <p id="category-name">Home</p>
+            </div>
+          <% end %>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "mechanic") do%>
-        <%= image_tag('my-mechanic.jpeg', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Mechanic", tools_path(category: "mechanic") %></p>
-      </div>
+        <div class="card-category-home image-home">
+          <%= link_to tools_path(category: "mechanic") do %>
+            <div class="position-text" style="background: linear-gradient(307deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.6) 0%), url('<%= image_path('my-mechanic.jpeg') %>'); background-size: cover; height: 100%;">
+              <p id="category-name">Mechanic</p>
+            </div>
+          <% end %>
+        </div>
   </div>
