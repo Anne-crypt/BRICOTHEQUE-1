@@ -1,18 +1,31 @@
+.card-tool-index {
+  width: 450px;
+  height: 470px;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    box-shadow: 7px 7px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .card-trip > img {
-  height: 200px;
-  width: 100%;
+  height: 400px;
+  width: 450px;
   object-fit: cover;
 }
 
 .card-trip h2 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
 }
 
@@ -22,12 +35,22 @@
   margin: 0;
 }
 
+.prices_info {
+  margin-right: 0px;
+  #price_day {
+    font-size: 14px;
+  }
+   #price_deposit {
+     font-size: 14px;
+   }
+}
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  color: black;
 }
 
 .card-trip-infos .card-trip-user {
@@ -40,4 +63,6 @@
 .card-trip-ul {
   list-style: none;
   padding: 0;
+  display:flex;
+  justify-content: space-evenly;
 }

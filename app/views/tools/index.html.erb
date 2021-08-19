@@ -16,17 +16,19 @@
 <div>
   <ul class="card-trip-ul">
   <% @tools.each do |tool| %>
-    <li>
+    <li class="card-tool-index">
       <%= link_to tool_path(tool) do %>
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%= cl_image_tag(tool.photos.first.key, class: "toolcard_image", crop: :scale) %>
           <div class="card-trip-infos">
             <div>
-              <h2><%=tool.name%></h2>
+              <h2><strong><%=tool.name%></strong></h2>
               <p><%=tool.description%></p>
             </div>
-            <h2 class="card-trip-pricing">PRICE <%=(tool.price_day).round(2)%> $ / DAY</h2>
-            <h2 class="card-trip-pricing">DEPOSIT <%=(tool.price_deposit).round(2)%> $</h2>
+            <div class="prices_info">
+              <h2 class="card-trip-pricing" id="price_day">PRICE: <strong><%=(tool.price_day).round(2)%> $</strong> / DAY</h2>
+              <h2 class="card-trip-pricing" id="price_deposit">DEPOSIT: <strong><%=(tool.price_deposit).round(2)%> $</strong></h2>
+            </div>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
         </div>
