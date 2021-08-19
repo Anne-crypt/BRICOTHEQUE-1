@@ -2,8 +2,8 @@
 <div class="container" id="tool-detail">
   <h1><%= @tool.name %></h1>
   <br>
-  <div>
-    <img class="tool-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="tool-image">
+    <%= cl_image_tag @tool.photos.first.key, class: "tool-image", crop: :thumb%>
   </div>
   <div>
     <div class="info">

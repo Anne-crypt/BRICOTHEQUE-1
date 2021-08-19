@@ -1,39 +1,8 @@
 <div class="container">
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <i class="fas fa-tools"></i>
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <% if user_signed_in? %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-link" %>
-        <%= current_user.email %>
-        <% else %>
-        <li><%= link_to 'Sign in', new_user_session_path, class: "nav-link" %></li>
-        <li><%= link_to 'Register', new_user_registration_path, class: "nav-link" %></li>
-        <% end %>
-      </li>
-      <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "ASee tools list", tools_path, class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-</div>
 
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/background outils.jpeg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path("home_tool_rizjqh", crop: :fill )%>');">
   <div class="container">
     <div>
       <h1>BRICOTHEQUE</h1>
@@ -49,8 +18,6 @@
     </div>
   </div>
 </div>
-
-<%= link_to "log out", destroy_user_session_path, method: :delete %>
 
 <br>
 <div class="container" id="carousel" >
@@ -121,4 +88,5 @@
   </div>
 <br>
 <br>
+</div>
 </div>
