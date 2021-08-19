@@ -7,4 +7,9 @@ class Tool < ApplicationRecord
 
   validates :name, :price_day, :price_deposit, :user_id, presence: true
   validates :category, inclusion: { in: CATEGORIES }, allow_nil: true
+
+  include PgSearch::Model
+  pg_search_scope :search_global,
+                 against: %I[name description],
+                 using: { tsearch: { prefix: true } }
 end
