@@ -13,9 +13,10 @@
     <%= stylesheet_pack_tag 'application' %>
   </head>
 
+  <header><%= render 'shared/navbar'%></header>
+
   <body>
     <%= render 'shared/flashes' %>
-    <%= render 'shared/navbar'%>
     <%= yield %>
   </body>
 </html>
