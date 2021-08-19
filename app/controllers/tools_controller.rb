@@ -5,15 +5,12 @@ class ToolsController < ApplicationController
     if params[:category].present?
       # @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
       @tools = policy_scope(Tool).where(category: params[:category])
+    elsif params[:search][:query].present?
+      @tools = policy_scope(Tool).search_global(params[:search][:query])
     else
-      # @tools = policy_scope(Tool).order(created_at: :desc)
       @tools = policy_scope(Tool).all
-      @tools = Tool.all
       @markers = @tools.geocoded.map do |tool|
-        {
-          lat: tool.latitude,
-          lng: tool.longitude
-        }
+        { lat: tool.latitude, lng: tool.longitude }
       end
     end
   end
