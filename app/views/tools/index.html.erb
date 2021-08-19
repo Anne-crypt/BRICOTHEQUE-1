@@ -1,5 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path("home_tool_rizjqh", crop: :fill )%>');" >
-  <h1>A tool for every job</h1>
+  <div class="container" >
+    <h1>A tool for every job</h1>
+    <%= simple_form_for :search, url: tools_path, method: :get, html: { class:"search-form-control form-group" } do |f| %>
+          <input class="form-control string required" type="text" name="search[query]" id="search_query" value="Can't find what you need, look for something else"/>
+          <button type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> Search
+          </button>
+      <% end %>
+  </div>
 </div>
 
 <ul class="toolcards">

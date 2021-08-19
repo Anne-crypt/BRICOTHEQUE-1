@@ -5,9 +5,11 @@ class ToolsController < ApplicationController
     if params[:category].present?
       # @tools = policy_scope(Tool).order(created_at: :desc).where(title: params[:query])
       @tools = policy_scope(Tool).where(category: params[:category])
+    elsif params[:search][:query].present?
+      @tools = policy_scope(Tool).search_global(params[:search][:query])
     else
-      # @tools = policy_scope(Tool).order(created_at: :desc)
       @tools = policy_scope(Tool).all
+
       @tools = Tool.all
 
       @markers = @tools.geocoded.map do |tool|
@@ -17,6 +19,7 @@ class ToolsController < ApplicationController
           info_window: render_to_string(partial: "info_window", locals: { tool: tool }),
           # image_url: helpers.asset_url("fas fa-tools")
         }
+
       end
     end
   end
