@@ -15,32 +15,32 @@
 
   <br>
   <div class="container">
+      <div class="cards">
+        <div class="card-category-home">
+          <%= link_to tools_path(category: "garden") do%>
+            <%= image_tag('gardening.webp', class: 'image-home') %>
+          <%end%>
+          <p id="category-name" class="position-text"><%= link_to "Garden", tools_path(category: "garden") %></p>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "garden") do%>
-        <%= image_tag('gardening.webp', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Garden", tools_path(category: "garden") %></p>
-      </div>
+        <div class="card-category-home">
+          <%= link_to tools_path(category: "machinery") do%>
+            <%= image_tag('machinery.jpeg', class: 'image-home layer') %>
+          <%end%>
+          <p id="category-name" class="position-text"><%= link_to "Machinery", tools_path(category: "machinery") %></p>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "machinery") do%>
-        <%= image_tag('machinery.jpeg', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Machinery", tools_path(category: "machinery") %></p>
-      </div>
+        <div class="card-category-home">
+          <%= link_to tools_path(category: "home") do%>
+            <%= image_tag('home_tool.png', class: 'image-home') %>
+          <%end%>
+          <p id="category-name" class="position-text"><%= link_to "Home", tools_path(category: "home") %></p>
+        </div>
 
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "home") do%>
-        <%= image_tag('home_tool.png', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Home", tools_path(category: "home") %></p>
-      </div>
-
-      <div class="card-category-home">
-        <%= link_to tools_path(category: "mechanic") do%>
-        <%= image_tag('my-mechanic.jpeg', class: 'image') %>
-        <%end%>
-        <p id="category-name" class="position-text"><%= link_to "Mechanic", tools_path(category: "mechanic") %></p>
-      </div>
+        <div class="card-category-home">
+          <%= link_to tools_path(category: "mechanic") do%>
+            <%= image_tag('my-mechanic.jpeg', class: 'image-home') %>
+          <%end%>
+          <p id="category-name" class="position-text"><%= link_to "Mechanic", tools_path(category: "mechanic") %></p>
+        </div>
   </div>
