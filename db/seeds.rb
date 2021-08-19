@@ -19,10 +19,11 @@ puts "Amdin user created"
 
 CATEGORIES = Tool::CATEGORIES
 puts "Creating Tools..."
-hammer = Tool.new({name: "Beautiful hammer", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id})
-screwer = Tool.new({name: "Clean screwer", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id})
-screwdriver = Tool.new({name: "Smooth screwdriver", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: raph.id})
-broom = Tool.new({name: "Efficient broom", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id})
+adjustableWrench = Tool.new({name: "So convenient", address: "100 rue Alexandre Dumas, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "Best wrench ever", user_id: raph.id})
+hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id})
+screwer = Tool.new({name: "Clean screwer", address: "1 avenue Netter, Paris", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id})
+screwdriver = Tool.new({name: "Smooth screwdriver", address: "5 rue Victor Chevreuil, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: raph.id})
+broom = Tool.new({name: "Efficient broom", address: "2 rue Ledru-Rollin, Paris", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id})
 urlbroom = URI.open("https://cdn.shopify.com/s/files/1/1326/7515/products/Barn_Broom_2048x.jpg?v=1533896902")
 urlscrewer = URI.open("https://media.istockphoto.com/photos/spanner-isolated-on-white-picture-id498761286?k=6&m=498761286&s=612x612&w=0&h=Ng2IAkDjJPcU3UUN4ny7pw6fmdu-K5-k19zgFaFsWRM=")
 urlscrewdriver = URI.open("https://shop.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_20989.jpg")
