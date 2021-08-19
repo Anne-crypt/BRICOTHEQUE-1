@@ -1,11 +1,10 @@
-body {
-  background-color: rgb(238, 209, 45);
-}
-
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .banner h1 {
@@ -13,16 +12,16 @@ body {
   padding-bottom: 50px;
   color: rgb(238, 209, 45);
   text-shadow: 5px 5px 10px 5px rgba(14, 13, 13, 0.986);
-  font-size: 120px;
+  font-size: 75px;
   font-weight: bold;
   text-align: center;
 }
 
 .banner p {
-  font-size: 50px;
+  font-size: 25px;
   color: rgb(238, 209, 45);
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 //  search bar -->
@@ -40,12 +39,12 @@ body {
 
 .search-form-control .form-control {
   height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7e7e7;
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid #1edd88;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
