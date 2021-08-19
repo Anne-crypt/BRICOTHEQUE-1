@@ -1,4 +1,4 @@
-.card-category-garden {
+.card-category-home {
   position: relative;
   background-size: cover;
   background-position: bottom 22% right 0px;
@@ -9,51 +9,22 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+  // box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
   &:hover {
-    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
-    color: rgba(252, 185, 2, 0.986);
+    // box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+    // color: rgba(252, 185, 2, 0.986);
   }
 
   a {
     color: whitesmoke;
     text-decoration: none;
-  // &:hover {
-  //   color: rgba(252, 185, 2, 0.986);
-  // }
+    // &:hover {
+    //   color: rgba(252, 185, 2, 0.986);
+    // }
   }
 }
-
-.card-category-machinery {
-  position: relative;
-  background-size: cover;
-  background-position: bottom 100% right 0px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
-  &:hover {
-    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
-    color: rgba(252, 185, 2, 0.986);
-  }
-  a {
-    color: whitesmoke;
-    text-decoration: none;
-  // &:hover {
-  //   color: rgba(252, 185, 2, 0.986);
-  // }
-  }
-}
-
-
 
 .image {
   width: 1110px;
@@ -66,56 +37,83 @@
   position: absolute;
 }
 
-.card-category-home {
-  position: relative;
-  background-size: cover;
-  background-position: bottom 19% right 0px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
-  &:hover {
-    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
-    color: rgba(252, 185, 2, 0.986);
-  }
-  a {
-    color: whitesmoke;
-    text-decoration: none;
-  // &:hover {
-  //   color: rgba(252, 185, 2, 0.986);
-  // }
-  }
-}
+// .card-category-machinery {
+//   position: relative;
+//   background-size: cover;
+//   background-position: bottom 100% right 0px;
+//   height: 250px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   border-radius: 5px;
+//   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+//   &:hover {
+//     box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+//     color: rgba(252, 185, 2, 0.986);
+//   }
+//   a {
+//     color: whitesmoke;
+//     text-decoration: none;
+//     // &:hover {
+//     //   color: rgba(252, 185, 2, 0.986);
+//     // }
+//   }
+// }
 
-.card-category-mechanic {
-  position: relative;
-  background-size: cover;
-  background-position: bottom 65% right 0px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
-  &:hover {
-    box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
-    color: rgba(252, 185, 2, 0.986);
-  }
-  a {
-    color: whitesmoke;
-    text-decoration: none;
-  // &:hover {
-  //   color: rgba(252, 185, 2, 0.986);
-  // }
-  }
-}
+// .card-category-home {
+//   position: relative;
+//   background-size: cover;
+//   background-position: bottom 19% right 0px;
+//   height: 250px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   border-radius: 5px;
+//   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+//   &:hover {
+//     box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+//     color: rgba(252, 185, 2, 0.986);
+//   }
+//   a {
+//     color: whitesmoke;
+//     text-decoration: none;
+//     // &:hover {
+//     //   color: rgba(252, 185, 2, 0.986);
+//     // }
+//   }
+// }
+
+// .card-category-mechanic {
+//   position: relative;
+//   background-size: cover;
+//   background-position: bottom 65% right 0px;
+//   height: 250px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   border-radius: 5px;
+//   box-shadow: 3px 3px 5px 5px rgba(255, 254, 254, 0.986);
+//   &:hover {
+//     box-shadow: 2px 2px 2px 2px rgba(252, 185, 2, 0.986);
+//     color: rgba(252, 185, 2, 0.986);
+//   }
+//   a {
+//     color: whitesmoke;
+//     text-decoration: none;
+//     // &:hover {
+//     //   color: rgba(252, 185, 2, 0.986);
+//     // }
+//   }
+// }

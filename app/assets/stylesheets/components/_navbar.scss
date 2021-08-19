@@ -18,3 +18,9 @@
 #current-email {
   margin-right: 20px;
 }
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
