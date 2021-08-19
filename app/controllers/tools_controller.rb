@@ -9,8 +9,17 @@ class ToolsController < ApplicationController
       @tools = policy_scope(Tool).search_global(params[:search][:query])
     else
       @tools = policy_scope(Tool).all
+
+      @tools = Tool.all
+
       @markers = @tools.geocoded.map do |tool|
-        { lat: tool.latitude, lng: tool.longitude }
+        {
+          lat: tool.latitude,
+          lng: tool.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { tool: tool }),
+          # image_url: helpers.asset_url("fas fa-tools")
+        }
+
       end
     end
   end
