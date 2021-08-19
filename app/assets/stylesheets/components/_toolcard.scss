@@ -7,11 +7,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #fef8f8;
-}
-
 .toolcards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,7 +40,7 @@ body {
   border-radius: calc(var(--curve) * 1px);
   background-color: var(--surface-color);
   transform: translateY(100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .toolcard:hover .toolcard__overlay {
@@ -61,7 +56,7 @@ body {
   border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
   transform: translateY(-100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .toolcard__arc {
@@ -90,28 +85,28 @@ body {
 
 .toolcard__title {
   font-size: 1em;
-  margin: 0 0 .3em;
-  color: #EEED12DE;
+  margin: 0 0 0.3em;
+  color: #eeed12de;
 }
 
 .toolcard__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";
-  font-size: .8em;
-  color: #D7BDCA;
+  font-family: 'MockFlowFont';
+  font-size: 0.8em;
+  color: #d7bdca;
 }
 
 .toolcard__status {
-  font-size: .8em;
-  color: #D7BDCA;
+  font-size: 0.8em;
+  color: #d7bdca;
 }
 
 .toolcard__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
-  font-family: "MockFlowFont";
+  color: #d7bdca;
+  font-family: 'MockFlowFont';
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
