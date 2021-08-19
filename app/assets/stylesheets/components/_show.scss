@@ -1,13 +1,12 @@
 .tool-image {
-    margin: center;
-    border-style: none;
-    width: 100%;
-    height: 500px;
+  margin: center;
+  border-style: none;
+  width: 100%;
+  height: 500px;
 }
 
 h1 {
   text-align: center;
-  font-weight: bold;
   font-size: 80px;
 }
 
@@ -38,13 +37,13 @@ h1 {
   font-weight: bold;
   font-size: 40px;
   text-shadow: 2px 2px 5px 3px gray;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#167ffb, #0f60c4);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #0f60c4;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+  background: linear-gradient(#147eff, #0f67da);
   color: white;
 }
 
@@ -59,7 +58,7 @@ h1 {
   font-size: 30px;
   color: black;
   &:hover {
-    color: rgba(252, 185, 2, 0.986)
+    color: rgba(252, 185, 2, 0.986);
   }
 }
 
@@ -68,7 +67,7 @@ h1 {
   font-size: 30px;
   color: black;
   &:hover {
-    color: rgba(252, 185, 2, 0.986)
+    color: rgba(252, 185, 2, 0.986);
   }
 }
 
@@ -78,6 +77,6 @@ h1 {
   font-size: 30px;
   color: black;
   &:hover {
-    color: rgba(252, 185, 2, 0.986)
+    color: rgba(252, 185, 2, 0.986);
   }
 }
