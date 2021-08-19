@@ -40,8 +40,12 @@
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
+  overflow: hidden;
 }
 
 .position-text {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
