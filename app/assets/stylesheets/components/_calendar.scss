@@ -64,7 +64,7 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-color: rgba(255, 255, 255, 0);
       width: 100%;
@@ -110,7 +110,7 @@
 
     &--range-start {
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 3px;
         border-radius: 24px;
@@ -133,7 +133,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         height: calc(var(--height) * 0.9);
         background-color: #ffeaec;
@@ -180,18 +180,6 @@
       }
     }
   }
-}
-
-body {
-  display: grid;
-  place-items: center;
-  background-color: #eaedf2;
-  height: 100vh;
-  font: {
-    family: "Nunito", sans-serif;
-    size: 14px;
-  }
-  margin: 3vmin;
 }
 
 select,
