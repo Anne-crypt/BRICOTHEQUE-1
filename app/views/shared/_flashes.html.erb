@@ -10,3 +10,20 @@
     <%= alert %>
   </div>
 <% end %>
+<% if info %>
+  <div class="confirm" role="alert">
+   <div class='emptyspace'>
+      <div class="face">
+        <div class="eye"></div>
+        <div class="eye right"></div>
+        <div class="mouth happy"></div>
+      </div>
+    </div>
+    <div class="shadow scale"></div>
+    <div class="confirm-text">
+      <h1>booked!</h1>
+      <p><%= info %></p>
+      <button class="btn btn-search-calendar" id="button-box">continue</button>
+    </div>
+  </div>
+<% end %>
