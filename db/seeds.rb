@@ -22,8 +22,8 @@ puts "Creating Tools..."
 adjustablewrench = Tool.new({name: "Adjustable Wrench", address: "100 rue Alexandre Dumas, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "So convenient, best wrench ever", user_id: raph.id})
 hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "Solid head set crosswise on a handle. I build my whole house with it.", user_id: raph.id})
 screwer = Tool.new({name: "Clean screwer", address: "1 avenue Netter, Paris", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "Simple tool used to drive bolts and screws with hexagonal heads. The tool is formed of a single piece.", user_id: raph.id})
-screwdriver = Tool.new({name: "Smooth screwdriver", address: "5 rue Victor Chevreuil, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "For turning screws. All screws can be deal with with this standard screwdriver, variety of sizes is ok.", user_id: raph.id})
-broom = Tool.new({name: "Efficient broom", address: "2 rue Ledru-Rollin, Paris", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id})
+screwdriver = Tool.new({name: "Smooth screwdriver", address: "12 rue du bac, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "For turning screws. All screws can be deal with with this standard screwdriver.", user_id: raph.id})
+broom = Tool.new({name: "Efficient broom", address: "2 rue Ledru-Rollin, Paris", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "Awesome broom - so efficient", user_id: raph.id})
 
 urladjustablewrench = URI.open("https://www.stanleytools.com/NA/product/images/3000x3000x96/90-947/90-947_1.jpg")
 urlshammer = URI.open("https://www.radtke-messtechnik.com/wp-content/uploads/2017/01/Hammer-gross-2_2048x-1024x686.jpg")
