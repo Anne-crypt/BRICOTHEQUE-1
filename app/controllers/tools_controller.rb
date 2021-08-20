@@ -48,7 +48,6 @@ class ToolsController < ApplicationController
   def edit
     @tool = Tool.find(params[:id])
     authorize @tool
-
   end
 
   def update
