@@ -56,3 +56,9 @@
   text-align: center;
   padding-top: 10px;
 }
+
+#show-height-center {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 156px);
+}
