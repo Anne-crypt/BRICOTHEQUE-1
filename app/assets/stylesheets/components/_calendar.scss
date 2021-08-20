@@ -208,7 +208,13 @@ select {
 }
 
 .btn-search-calendar {
+  color: black;
+  font-weight: bold;
   background-color: rgb(252, 185, 2);
   margin: 10px auto;
   width: 80%;
+  &:hover {
+    background-color: rgb(226, 168, 6);
+    color: white;
+  }
 }
