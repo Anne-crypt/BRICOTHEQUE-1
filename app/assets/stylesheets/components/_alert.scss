@@ -5,30 +5,125 @@
   z-index: 1000;
 }
 
-// .alert {
-//   padding: $alert-padding;
-//   margin-bottom: $line-height-computed;
-//   border: 1px solid transparent;
-//   border-radius: $alert-border-radius;
+.confirm{
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid #632B02;
+  perspective: 40px;
+  padding: 2px;
+  margin: 5px;
+}
 
-//   // Headings for larger alerts
-//   h4 {
-//     margin-top: 0;
-//     color: inherit; // Specified for the h4 to prevent conflicts of changing $headings-color
-//   }
+.face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: $ouryellow;
+  border-radius: 50%;
+  border: 1px solid $dark;
+  top: 10%;
+  left: 40%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+.emptyspace{
+  height:40%;
+}
 
-//   // Provide class for links that match alerts
-//   .alert-link {
-//     font-weight: $alert-link-font-weight;
-//   }
+.eye {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: $dark;
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
 
-//   // Improve alignment and spacing of inner content
-//   > p,
-//   > ul {
-//     margin-bottom: 0;
-//   }
+.right {
+  left: 68%;
+}
 
-//   > p + p {
-//     margin-top: 5px;
-//   }
-// }
+.mouth {
+  position:absolute;
+  top: 43%;
+  left: 41%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.happy {
+  border: 2px solid;
+  border-color: transparent $dark $dark transparent;
+  transform: rotate(45deg);
+}
+.shadow {
+  position: absolute;
+  width: 50px;
+  height: 3%;
+  opacity: .5;
+  background: $dark;
+  left: 40%;
+  top: 32%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.scale {
+  animation: scale 1s ease-in infinite;
+}
+.confirm-text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  p {
+  margin-top: -5px;
+  font-size: 0.5em;
+  font-weight: 100;
+  color: black;
+  letter-spacing: 1px;
+  }
+  h1{
+    font-size: 0.9em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #632B02;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+}
+
+#button-box {
+  letter-spacing: 3px;
+  text-align: center;
+  width: 50%;
+  height: 15%;
+  top: 73%;
+  left: 25%;
+  outline: 0;
+  color: #632B02;
+  transition: all .5s ease-in-out;
+  &:hover {
+    background: darken($white, 5%);
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  50% {
+     transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
