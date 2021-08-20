@@ -5,7 +5,7 @@
       <div>
           <h1 class="booking-title"><%= @tool.name %></h1>
         <br>
-        <div class="tool-image">
+        <div class="tool-image" id="tool-image">
           <%= cl_image_tag @tool.photos.first.key, class: "tool-image", crop: :thumb%>
         </div>
         <div id="text-align-center">
