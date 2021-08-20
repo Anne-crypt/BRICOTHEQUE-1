@@ -1,13 +1,16 @@
-<h1>New Tool</h1>
-<%# formulaire pour créer %>
+
+<div class="container title-new-tool">
+  <h1>Add your Tool</h1>
+</div>
+
 <div class="container my-5">
   <div class="row">
-    <div class="col-4 mx-auto">
+    <div class="col-4 mx-auto form-group">
       <%= simple_form_for [@tool] do |f| %>
       <%= f.input :name %>
       <%= f.input :price_day %>
       <%= f.input :price_deposit %>
-      <%= f.input :category %>
+      <%= f.input :category, collection: Tool::CATEGORIES %>
       <%= f.input :description %>
       <%= f.input :custom_field, as: :boolean,
                 input_html: {id: "user_address_checking"},
@@ -16,13 +19,9 @@
       <%= f.input :address,
                 id: 'tool_address'%>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit %>
+      <%= f.button_button t(".CREATE MY TOOL"), name: "submit", class: "btn btn-new-tool" %>
       <% end %>
     </div>
-
-    <% if policy(Tool).create? %>
-      <%= link_to "New Tool", new_tool_path %>
-    <% end %>
 
   </div>
 </div>
