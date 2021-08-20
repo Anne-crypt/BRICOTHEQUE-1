@@ -20,7 +20,7 @@ puts "Amdin user created"
 CATEGORIES = Tool::CATEGORIES
 puts "Creating Tools..."
 adjustableWrench = Tool.new({name: "So convenient", address: "100 rue Alexandre Dumas, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "Best wrench ever", user_id: raph.id})
-hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id})
+hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[0], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id})
 screwer = Tool.new({name: "Clean screwer", address: "1 avenue Netter, Paris", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id})
 screwdriver = Tool.new({name: "Smooth screwdriver", address: "5 rue Victor Chevreuil, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: raph.id})
 broom = Tool.new({name: "Efficient broom", address: "2 rue Ledru-Rollin, Paris", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id})
