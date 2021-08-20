@@ -34,10 +34,11 @@ class ToolsController < ApplicationController
 
   def create
     @tool = Tool.new(tool_params)
+    @tool.user = current_user
+    @tool.address = @tool.address.nil? ? @tool.user.address : @tool.address
     authorize @tool
-    @tool.user_id = current_user
     if @tool.save
-      redirect tools_path
+      redirect_to tools_path
     else
       render :new
     end
