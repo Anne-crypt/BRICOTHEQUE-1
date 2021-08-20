@@ -206,3 +206,9 @@ select {
     position: calc(100% - var(--side-padding)) center;
   }
 }
+
+.btn-search-calendar {
+  background-color: rgb(252, 185, 2);
+  margin: 10px auto;
+  width: 80%;
+}
