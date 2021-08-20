@@ -19,24 +19,31 @@ puts "Amdin user created"
 
 CATEGORIES = Tool::CATEGORIES
 puts "Creating Tools..."
-adjustableWrench = Tool.new({name: "So convenient", address: "100 rue Alexandre Dumas, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "Best wrench ever", user_id: raph.id})
-hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "this is a description test for the hammer", user_id: raph.id})
-screwer = Tool.new({name: "Clean screwer", address: "1 avenue Netter, Paris", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "this is a description test for the screwer", user_id: raph.id})
-screwdriver = Tool.new({name: "Smooth screwdriver", address: "5 rue Victor Chevreuil, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "this is a description test for the screwdriver", user_id: raph.id})
+adjustablewrench = Tool.new({name: "Adjustable Wrench", address: "100 rue Alexandre Dumas, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "So convenient, best wrench ever", user_id: raph.id})
+hammer = Tool.new({name: "Beautiful hammer", address: "16 Villa Gaudelet, Paris", category: CATEGORIES[3], price_day: 14, price_deposit: 145, description: "Solid head set crosswise on a handle. I build my whole house with it.", user_id: raph.id})
+screwer = Tool.new({name: "Clean screwer", address: "1 avenue Netter, Paris", category: CATEGORIES[1], price_day: 25, price_deposit: 335, description: "Simple tool used to drive bolts and screws with hexagonal heads. The tool is formed of a single piece.", user_id: raph.id})
+screwdriver = Tool.new({name: "Smooth screwdriver", address: "5 rue Victor Chevreuil, Paris", category: CATEGORIES[2], price_day: 43, price_deposit: 255, description: "For turning screws. All screws can be deal with with this standard screwdriver, variety of sizes is ok.", user_id: raph.id})
 broom = Tool.new({name: "Efficient broom", address: "2 rue Ledru-Rollin, Paris", category: CATEGORIES[3], price_day: 32, price_deposit: 98, description: "this is a description test for the broom", user_id: raph.id})
-urlbroom = URI.open("https://cdn.shopify.com/s/files/1/1326/7515/products/Barn_Broom_2048x.jpg?v=1533896902")
+
+urladjustablewrench = URI.open("https://www.stanleytools.com/NA/product/images/3000x3000x96/90-947/90-947_1.jpg")
+urlshammer = URI.open("https://www.radtke-messtechnik.com/wp-content/uploads/2017/01/Hammer-gross-2_2048x-1024x686.jpg")
 urlscrewer = URI.open("https://media.istockphoto.com/photos/spanner-isolated-on-white-picture-id498761286?k=6&m=498761286&s=612x612&w=0&h=Ng2IAkDjJPcU3UUN4ny7pw6fmdu-K5-k19zgFaFsWRM=")
 urlscrewdriver = URI.open("https://shop.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_20989.jpg")
-urlshammer = URI.open("https://www.radtke-messtechnik.com/wp-content/uploads/2017/01/Hammer-gross-2_2048x-1024x686.jpg")
+urlbroom = URI.open("https://cdn.shopify.com/s/files/1/1326/7515/products/Barn_Broom_2048x.jpg?v=1533896902")
+
+adjustablewrench.photos.attach(io: urladjustablewrench, filename: "adjustableWrench.jpeg", content_type: 'image/jpg')
 hammer.photos.attach(io: urlshammer, filename: "hammer.jpg", content_type: 'image/jpg')
 broom.photos.attach(io: urlbroom, filename: "broom.jpg", content_type: 'image/jpg')
 screwer.photos.attach(io: urlscrewer, filename: "screwer.jpg", content_type: 'image/jpg')
 screwdriver.photos.attach(io: urlscrewdriver, filename: "screwdriver.jpg", content_type: 'image/jpg')
+
+adjustablewrench.save
 hammer.save
 screwer.save
 broom.save
 screwdriver.save
-puts "4 tools are generated"
+
+puts "5 tools are generated"
 
 dorien = User.create({email: "test@lewagon.org", first_name: "Dorien", last_name: "RE", admin: false, password: "test-test"})
 rahim = User.create({email: "pauillacrahimdev@gmail.com", first_name: "rahim", last_name: "pauillac", admin: false, password: "password973"})
