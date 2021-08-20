@@ -37,6 +37,10 @@
   right: 8px;
 }
 
+.btn.btn-search.hover {
+  color: white;
+}
+
 .search-form-control .form-control {
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -47,4 +51,9 @@
   border: 1px solid #1edd88;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#bouton:hover{
+  color: white;
+  background-color: #dba204;
 }
