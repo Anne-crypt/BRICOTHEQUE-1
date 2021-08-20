@@ -27,16 +27,20 @@
 
 .btn-search {
   background-color: rgb(252, 185, 2);
-  color: black !important;
-}
 
-.btn-search:hover{
-  color: white !important;
-  background-color: #dba204;
+  color: black;
+  &:hover {
+    background-color: rgb(226, 168, 6);
+    color: white;
+  }
 }
 
 .btn-add-tool a {
-  color: black !important;
+  background-color: rgb(252, 185, 2);
+  color: black;
+  &:hover {
+    color: white;
+  }
   text-decoration: none;
   font-weight: 500;
 }
