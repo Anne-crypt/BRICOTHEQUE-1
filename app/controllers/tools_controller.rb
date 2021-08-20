@@ -16,7 +16,7 @@ class ToolsController < ApplicationController
           lat: tool.latitude,
           lng: tool.longitude,
           info_window: render_to_string(partial: "info_window", locals: { tool: tool }),
-          image_url: helpers.asset_url("tool.png")
+          image_url: helpers.asset_url("https://res.cloudinary.com/dasawfecj/image/upload/v1629378939/tools-solid_dog2qx.svg")
         }
 
     end
