@@ -5,7 +5,7 @@
   z-index: 1000;
 }
 
-.confirm{
+.confirm {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -13,7 +13,7 @@
   transform: translate(-50%, 0);
   background-color: white;
   border-radius: 20px;
-  border: 2px solid #632B02;
+  border: 2px solid #632b02;
   perspective: 40px;
   padding: 2px;
   margin: 5px;
@@ -31,8 +31,8 @@
   z-index: 2;
   animation: bounce 1s ease-in infinite;
 }
-.emptyspace{
-  height:40%;
+.emptyspace {
+  height: 40%;
 }
 
 .eye {
@@ -50,7 +50,7 @@
 }
 
 .mouth {
-  position:absolute;
+  position: absolute;
   top: 43%;
   left: 41%;
   width: 7px;
@@ -67,7 +67,7 @@
   position: absolute;
   width: 50px;
   height: 3%;
-  opacity: .5;
+  opacity: 0.5;
   background: $dark;
   left: 45%;
   top: 32%;
@@ -78,22 +78,22 @@
 .scale {
   animation: scale 1s ease-in infinite;
 }
-.confirm-text{
+.confirm-text {
   position: absolute;
   width: 100%;
   text-align: center;
   p {
-  margin-top: -5px;
-  font-size: 10px;
-  font-weight: 100;
-  color: black;
-  letter-spacing: 1px;
+    margin-top: -5px;
+    font-size: 15px;
+    font-weight: 100;
+    color: black;
+    letter-spacing: 1px;
   }
-  h1{
+  h1 {
     font-size: 0.9em;
     font-weight: 100;
     letter-spacing: 3px;
-    color: #632B02;
+    color: #632b02;
     padding-bottom: 5px;
     text-transform: uppercase;
   }
@@ -107,17 +107,17 @@
   top: 73%;
   left: 25%;
   outline: 0;
-  color: #632B02;
+  color: #632b02;
   &:hover {
     background: darken($white, 5%);
     transform: scale(1.05);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
 @keyframes bounce {
   50% {
-     transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 

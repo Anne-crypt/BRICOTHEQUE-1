@@ -205,6 +205,7 @@ select {
     repeat: no-repeat;
     position: calc(100% - var(--side-padding)) center;
   }
+  background-position: right;
 }
 
 .btn-search-calendar {
