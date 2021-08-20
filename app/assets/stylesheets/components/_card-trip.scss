@@ -1,27 +1,31 @@
 .card-tool-index {
-  width: 450px;
-  height: 470px;
-  margin-bottom: 50px;
+  width: 300px;
+  height: 100%;
+  margin-bottom: 15px;
+
   a {
     text-decoration: none;
-  }
-  &:hover {
-    box-shadow: 7px 7px 10px rgba(0,0,0,0.2);
-    border-radius: 10px;
   }
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
 .card-trip > img {
-  height: 400px;
-  width: 450px;
+  height: 170px;
+  width: 100%;
   object-fit: cover;
+
+  &:hover {
+    transition: 0.3s;
+    height: 100%;
+    border: 3px solid rgb(252, 185, 2);
+    border-radius: 10px;
+  }
 }
 
 .card-trip h2 {
@@ -32,7 +36,7 @@
 
 .card-trip p {
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
   margin: 0;
 }
 
@@ -41,17 +45,18 @@
   #price_day {
     font-size: 14px;
   }
-   #price_deposit {
-     font-size: 14px;
-   }
+  #price_deposit {
+    font-size: 14px;
+  }
 }
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
   color: black;
+  height: 112px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -64,10 +69,15 @@
 .card-trip-ul {
   list-style: none;
   padding: 0;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  // flex-wrap: wrap;
+  // flex-direction: row;
+  // margin-bottom: 8px;
+  // padding-bottom: 8px;
+}
+
+#card-trip-description {
+  width: 45%;
 }
