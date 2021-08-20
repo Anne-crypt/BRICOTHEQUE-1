@@ -1,25 +1,48 @@
 <br>
-<div class="container" id="toolcard-detail">
-  <h1><%= @tool.name %></h1>
-  <br>
-  <div class="toolcard-image">
-    <%= cl_image_tag @tool.photos.first.key, class: "toolcard-image", crop: :thumb%>
-  </div>
-  <div>
-    <div class="info">
-      <p><%= @tool.description %></p>
+
+<div class="container card-grid" id="tool-detail">
+  <div class="card-grid">
+
+    <div id="card-1">
+      <div>
+          <h1 class="show-title"><%= @tool.name %></h1>
+        <br>
+        <div class="tool-image">
+          <%= cl_image_tag @tool.photos.first.key, class: "tool-image", crop: :thumb%>
+        </div>
+        <div>
+          <div class="info">
+            <p><%= @tool.description %></p>
+          </div>
+          <div class="prices">
+            <p><%= @tool.price_day %> $</p>
+            <p><%= @tool.price_deposit %> $</p>
+          </div>
+        </div>
+        <a href=""><%= link_to "BOOK NOW", new_tool_booking_path(@tool), class: "btn btn-search" %></a>
+        <br>
+      </div>
+      <br>
+      <div class="link">
+        <br>
+        <%= link_to "Back to list", "/tools?category=#{@tool.category}", class: "show-link" %>
+        <%= link_to "Edit a tool", edit_tool_path(@tool), class: "show-link" %>
+        <%= link_to "Back to home", root_path, class: "show-link" %>
+      </div>
+
     </div>
-    <div class="prices">
-      <p><%= @tool.price_day %> $</p>
-      <p><%= @tool.price_deposit %> $</p>
-      <div class="container my-5">
-        <div class="row">
-          <div class="col-4 mx-auto">
-            <%= simple_form_for [@tool, @booking] do |f| %>
-            <%= f.input :start_date, as: :date, html5: true %>
-            <%= f.input :end_date, as: :date, html5: true %>
-            <%= f.submit %>
-            <% end %>
+
+    <div id="card-2">
+      <div>
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-4 mx-auto">
+              <%= simple_form_for [@tool, @booking] do |f| %>
+              <%= f.input :start_date, as: :date, html5: true %>
+              <%= f.input :end_date, as: :date, html5: true %>
+              <%= f.submit %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
@@ -33,6 +56,5 @@
   <br>
   <div class="link">
     <br>
-
   </div>
 </div>

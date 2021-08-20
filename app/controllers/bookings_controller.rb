@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_tool, only: %i[new create]
   def index
-    @user = User.find(params[:user_id])
-    @bookings = policy_scope(Booking).where(status: 'pending')
+    @bookings = policy_scope(Booking)
+    @user = current_user
   end
 
   def confirm
