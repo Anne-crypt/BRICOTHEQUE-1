@@ -1,6 +1,9 @@
   <div class="navbar sticky-nav navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <i class="fas fa-home"></i>
+    <div class="d-flex align-items-center">
+      <i class="fas fa-home text-home"></i>
+      <p id="text-home">La Bricothèque</p>
+    </div>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +15,7 @@
         <li class="nav-item active">
           <% if user_signed_in? %>
             <li id="current-email">Welcome back <%= current_user.first_name %>!</li>
+            <li class="btn btn-add-tool"><%= link_to "Add a new tool", new_tool_path %></li>
           <% else %>
             <li id="current-email"><strong>Welcome! Please consider to Register!</strong></li>
             <li><%= link_to 'Sign in', new_user_session_path, class: "dropdown-item text-center" %></li>
