@@ -14,7 +14,7 @@ Review.destroy_all
 puts "Database cleaned"
 
 puts "Creating Amdin user..."
-raph = User.create({email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino", admin: true, password: "test-test"})
+raph = User.create({email: "raphael@lewagon.org", first_name: "Edouard", last_name: "Kalino", admin: true, password: "test-test", address: "16 Villa Gaudelet, Paris 11e Arrondissement, Île-de-France, Frankrijk"})
 puts "Amdin user created"
 
 CATEGORIES = Tool::CATEGORIES
@@ -46,8 +46,8 @@ screwdriver.save
 
 puts "5 tools are generated"
 
-dorien = User.create({email: "test@lewagon.org", first_name: "Dorien", last_name: "RE", admin: false, password: "test-test"})
-rahim = User.create({email: "pauillacrahimdev@gmail.com", first_name: "rahim", last_name: "pauillac", admin: false, password: "password973"})
+dorien = User.create({email: "test@lewagon.org", first_name: "Dorien", last_name: "RE", admin: false, password: "test-test", address: "16 Villa Gaudelet, Paris 11e Arrondissement, Île-de-France, Frankrijk"})
+rahim = User.create({email: "pauillacrahimdev@gmail.com", first_name: "rahim", last_name: "pauillac", admin: false, password: "password973" , address: "16 Villa Gaudelet, Paris 11e Arrondissement, Île-de-France, Frankrijk"})
 
 
 puts "create second user Dorien"
@@ -62,11 +62,11 @@ booking1.end_date = Date.today
 booking1.status = "confirmed"
 booking1.save
 
-# booking2 = Booking.new
-# booking2.tool = screwdriver
-# booking2.user = dorien
-# booking2.start_date = Date.today
-# booking2.end_date = Date.today
-# booking2.save
+booking2 = Booking.new
+booking2.tool = screwdriver
+booking2.user = rahim
+booking2.start_date = Date.today
+booking2.end_date = Date.today
+booking2.save
 
 puts "now you're good to go! "
