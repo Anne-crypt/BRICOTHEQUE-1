@@ -29,11 +29,6 @@
               <h2 class="card-trip-pricing" id="price_day">PRICE: <strong><%=(tool.price_day).round(2)%> $</strong> / DAY</h2>
               <h2 class="card-trip-pricing" id="price_deposit">DEPOSIT: <strong><%=(tool.price_deposit).round(2)%> $</strong></h2>
             </div>
-            <% if current_user && current_user.photo.attached?%>
-              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%else%>
-              <%= cl_image_tag "T02NE0241-U026U5FCBLJ-111d8cdd7344-512_jovd58", class: "card-trip-user avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%end%>
           </div>
         </div>
       <% end %>
