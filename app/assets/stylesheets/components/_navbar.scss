@@ -27,6 +27,12 @@
 
 .btn-search {
   background-color: rgb(252, 185, 2);
+  color: black !important;
+}
+
+.btn-search:hover{
+  color: white !important;
+  background-color: #dba204;
 }
 
 .btn-add-tool a {
