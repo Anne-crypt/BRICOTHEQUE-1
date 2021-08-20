@@ -1,0 +1,28 @@
+#booking-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.booking-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.prices p {
+  margin: 0px;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+#text-align-center {
+  text-align: center;
+}
+
+#info {
+  margin-top: 10px;
+}
