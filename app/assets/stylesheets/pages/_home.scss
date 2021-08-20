@@ -3,3 +3,9 @@
 .global-container {
   min-height: calc(100vh - 100px);
 }
+#text-home-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
