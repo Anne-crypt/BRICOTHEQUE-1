@@ -30,10 +30,12 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { createNewAddress } from '../plugins/init_addreschecker';
+import { hideAlert } from '../plugins/init_hidealert';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   createNewAddress();
+  hideAlert();
 })
 
   // Call your functions here, e.g:
