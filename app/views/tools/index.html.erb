@@ -12,16 +12,16 @@
         <% end %>
       </div>
 </div>
-<br>
-<div>
-  <ul class="card-trip-ul">
+
+<div class="container container-cards">
+  <ul class="card-trip-ul" style="margin-top: 50px;">
   <% @tools.each do |tool| %>
     <li class="card-tool-index">
       <%= link_to tool_path(tool) do %>
         <div class="card-trip">
           <%= cl_image_tag(tool.photos.first.key, class: "toolcard_image", crop: :scale) %>
           <div class="card-trip-infos">
-            <div>
+            <div id="card-trip-description">
               <h2><strong><%=tool.name%></strong></h2>
               <p><%=tool.description%></p>
             </div>
@@ -29,7 +29,11 @@
               <h2 class="card-trip-pricing" id="price_day">PRICE: <strong><%=(tool.price_day).round(2)%> $</strong> / DAY</h2>
               <h2 class="card-trip-pricing" id="price_deposit">DEPOSIT: <strong><%=(tool.price_deposit).round(2)%> $</strong></h2>
             </div>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            <% if current_user && current_user.photo.attached?%>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%else%>
+              <%= cl_image_tag "T02NE0241-U026U5FCBLJ-111d8cdd7344-512_jovd58", class: "card-trip-user avatar-bordered", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%end%>
           </div>
         </div>
       <% end %>
@@ -45,28 +49,3 @@
 </div>
 
 <%= link_to "create a new tool", new_tool_path %>
-
-        <%# <div class="toolcard__image" alt="">
-          <% if tool.photos.attached? %>
-            <%# <%= cl_image_tag(tool.photos.first.key, class: "toolcard_image", crop: :scale) %>
-          <%# <% end %>
-        <%# </div>
-        <div class="toolcard__overlay"> %>
-          <%# <div class="toolcard__header">
-            <svg class="toolcard__arc"><path class d = "M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
-            <div class="avatar toolcard__thumb"> %>
-              <%# <% case tool.category %>
-              <%# <% when Tool::CATEGORIES[0]%>
-                <%# <%= cl_image_tag('jhm0dvyrpritzt8c8qmbgldzum3r',borderradius: 50, width: 50, crop: :fill, gravity: :face)%>
-              <%# <% when Tool::CATEGORIES[1]%>
-              <%# <% when Tool::CATEGORIES[2] %>
-              <%# <% when Tool::CATEGORIES[3]%>
-              <%# <% end %>
-            <%# </div> %>
-            <%# <div class="toolcard__header-text"> %>
-              <%# <h3 class="toolcard__title"><%=tool.name</h3> %>
-              <%# <span class="toolcard__status">price per day: €<%=(tool.price_day).round(2)</span> %>
-            <%# </div> %>
-          <%# </div> %>
-          <%# <p class="toolcard__description"><%=tool.description</p> %>
-        <%# </div> %>
