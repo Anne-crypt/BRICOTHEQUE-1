@@ -37,11 +37,12 @@ class BookingsController < ApplicationController
 
   def save_the_booking(booking)
     if booking.save && booking.end_date >= booking.start_date
-      flash[:info] = "Successfully booked the #{booking.tool.name}, wait for #{booking.tool.user.first_name} #{booking.tool.user.last_name} to confirm your booking"
+      flash[:info] = "You booked the #{booking.tool.name}, for #{(booking.end_date - booking.start_date).to_i + 1} days.
+      Wait for #{booking.tool.user.first_name} #{booking.tool.user.last_name} to confirm your booking."
       redirect_to '/'
     elsif booking.end_date < booking.start_date
       flash[:notice] = "make sure your end-date is later or equal to your start-date"
-      redirect_to new_tool_booking_path
+      redirect_to tool_path(booking.tool)
     else
       render :new
     end
